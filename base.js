@@ -16,31 +16,19 @@ function randomInt(max) {
 }
 
 function GameSettings() {
-	this.storyteller = rimworldThings.storytellers[randomInt(rimworldThings.storytellers.length)];
-	this.scenario = rimworldThings.scenarios[randomInt(rimworldThings.scenarios.length)];
-	this.biome = rimworldThings.biomes[randomInt(rimworldThings.biomes.length)];
-	this.worldSize = rimworldThings.worldSizes[randomInt(rimworldThings.worldSizes.length)];
-	this.mapSize = rimworldThings.mapSize[randomInt(rimworldThings.mapSize.length)];
-	this.quadrum = rimworldThings.startingQuadrum[randomInt(rimworldThings.startingQuadrum.length)];
-	this.colonists = rimworldThings.colonists[randomInt(rimworldThings.colonists.length)];
-	this.strategy = rimworldThings.strategy[randomInt(rimworldThings.strategy.length)];
-	this.industry = rimworldThings.industry[randomInt(rimworldThings.industry.length)];
-	this.foreignRelations = rimworldThings.foreignRelations[randomInt(rimworldThings.foreignRelations.length)];
+    for (let [k, v] of Object.entries(rimworldThings)) {
+        this[k] = v[randomInt(v.length)];
+    }
 }
 
 function gen() {
-	let newGame = new GameSettings();
-	document.getElementById("storyteller").innerHTML = newGame.storyteller;
-	document.getElementById("scenario").innerHTML = newGame.scenario;
-	document.getElementById("biome").innerHTML = newGame.biome;
-	document.getElementById("worldSize").innerHTML = newGame.worldSize;
-	document.getElementById("mapSize").innerHTML = newGame.mapSize;
-	document.getElementById("quadrum").innerHTML = newGame.quadrum;
-	document.getElementById("colonists").innerHTML = newGame.colonists;
-	document.getElementById("strategy").innerHTML = newGame.strategy;
-	document.getElementById("industry").innerHTML = newGame.industry;
-	document.getElementById("foreignRelations").innerHTML = newGame.foreignRelations;
-	console.log("Generated Game.");
+    let newGame = new GameSettings();
+
+    for (let [k, v] of Object.entries(rimworldThings)) {
+        document.getElementById(k).innerHTML = newGame[k];
+    }
+
+    console.log("Generated Game.");
 }
 
 $(function() {

@@ -12,6 +12,19 @@ a {
 	font-family: "Lucida Console" !important;
 }
 
+.button:hover {
+	color: #212121;
+}
+
+.button:focus {
+	color: #212121;
+	outline: 0;
+}
+
+.button:active {
+  transform: translateY(4px);
+}
+
 .accordion-title {
 	background-color: #111111 !important;
 }
@@ -23,6 +36,7 @@ a {
 .accordion-item p {
 	color: #FF9800;
 	font-family: "Tahoma";
+	text-align: center;
 }
 
 body {

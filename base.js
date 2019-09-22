@@ -25,7 +25,10 @@ function gen() {
     let newGame = new GameSettings();
 
     for (let [k, v] of Object.entries(rimworldThings)) {
-        document.getElementById(k).innerHTML = newGame[k];
+		$(`#${k}`).fadeOut(100, () => {
+			document.getElementById(k).innerHTML = newGame[k];
+			$(`#${k}`).fadeIn();
+		});
     }
 
     console.log("Generated Game.");

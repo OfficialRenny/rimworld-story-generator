@@ -22,7 +22,7 @@ a {
 }
 
 .button:active {
-  transform: translateY(4px);
+  transform: translateY(20px);
 }
 
 .accordion-title {

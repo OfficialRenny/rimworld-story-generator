@@ -1,0 +1,1 @@
+Just a simple static site, with extra stuff to make it easy to deploy on Heroku.

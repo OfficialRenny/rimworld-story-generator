@@ -1,5 +1,6 @@
 var rimworldThings = {
 	storytellers: ['Randy', 'Cassandra', 'Pheobe', 'Modded'],
+	difficulties: ["Peaceful", "Builder", "Medium", "Rough", "Savage", "Merciless"],
 	scenarios: ['Crashlanded', 'Lost Tribe', 'The Rich Explorer', 'Naked Brutality', 'Make Your Own', 'Modded'],
 	biomes: ['Temperate Forest', 'Temperate Swamp', 'Tropical Forest', 'Tropical Swamp', 'Arid Shrubland', 'Desert', 'Extreme Desert', 'Boreal Forest', 'Cold Bog', 'Tundra', 'Ice Sheet', 'Sea Ice', 'Random'],
 	worldSizes: ['30%', '50%', '100%'],
